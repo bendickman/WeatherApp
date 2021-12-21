@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using WeatherApp.Infrastructure.Common.Interfaces;
 using WeatherApp.Domain.Entities;
+using Bogus;
 
 namespace WeatherApp.Infrastructure.Services
 {
@@ -8,16 +9,19 @@ namespace WeatherApp.Infrastructure.Services
     {
         public IEnumerable<Location> GetLocations(string searchText)
         {
-            IEnumerable<Location> vm = new List<Location>()
-            {
-                new Location { Id = 1, Name = "London"},
-                new Location { Id = 2, Name = "Liverpool"},
-                new Location { Id = 3, Name = "Poole"},
-                new Location { Id = 4, Name = "Warrington"},
-                new Location { Id = 5, Name = "Dublin"},
-            };
+            return GenerateLocations(50);
+        }
 
-            return vm;
+        private IEnumerable<Location> GenerateLocations(int count)
+        {
+            var mockData = new Faker<Location>()
+                .RuleFor(l => l.Id, f => f.Random.Int(0, 1000))
+                .RuleFor(l => l.Name, f => f.Random.Word())
+                .RuleFor(l => l.Latitude, f => f.Address.Latitude())
+                .RuleFor(l => l.Longitude, f => f.Address.Longitude());
+
+            return mockData.Generate(count);
+
         }
     }
 }
