@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using WeatherApp.Application.Locations.Queries;
+using WeatherApp.Domain.Entities;
 
 namespace WeatherApp.Api.Controllers
 {

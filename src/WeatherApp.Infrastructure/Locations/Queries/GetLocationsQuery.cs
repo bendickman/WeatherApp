@@ -1,8 +1,9 @@
 ﻿using MediatR;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using WeatherApp.Infrastructure.Common.Interfaces;
+using WeatherApp.Domain.Entities;
 
 namespace WeatherApp.Application.Locations.Queries
 {
@@ -17,17 +18,16 @@ namespace WeatherApp.Application.Locations.Queries
 
     public class GetLocationsQueryHandler : IRequestHandler<GetLocationsQuery, IEnumerable<Location>>
     {
+        private readonly ILocationService _locationService;
+
+        public GetLocationsQueryHandler(ILocationService locationService)
+        {
+            _locationService = locationService;
+        }
+
         public Task<IEnumerable<Location>> Handle(GetLocationsQuery request, CancellationToken cancellationToken)
         {
-
-            IEnumerable<Location> vm = new List<Location>()
-            {
-                new Location { Id = 1, Name = "London"},
-                new Location { Id = 2, Name = "Liverpool"},
-                new Location { Id = 3, Name = "Poole"},
-                new Location { Id = 4, Name = "Warrington"},
-                new Location { Id = 5, Name = "Dublin"},
-            };
+            var vm = _locationService.GetLocations(request.SearchText);            
 
             return Task.FromResult(vm);
         }

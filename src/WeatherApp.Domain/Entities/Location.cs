@@ -1,4 +1,4 @@
-﻿namespace WeatherApp.Application.Locations.Queries
+﻿namespace WeatherApp.Domain.Entities
 {
     public class Location
     {

@@ -1,8 +1,10 @@
 ﻿using System.Reflection;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using WeatherApp.Infrastructure.Common.Interfaces;
+using WeatherApp.Infrastructure.Services;
 
-namespace WeatherApp.Application
+namespace WeatherApp.Infrastructure
 {
     public static class DependencyInjection
     {
@@ -10,6 +12,7 @@ namespace WeatherApp.Application
         {
 
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddScoped<ILocationService, MockLocationService>();
 
             return services;
         }

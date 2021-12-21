@@ -7,11 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C9BBEE4-C80
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B4887D5B-C682-4889-89C9-850A04B1F995}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Api", "src\WeatherApp.Api\WeatherApp.Api.csproj", "{BF2FE3E9-630A-4731-A7C9-D0EA1267998B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.Api", "src\WeatherApp.Api\WeatherApp.Api.csproj", "{BF2FE3E9-630A-4731-A7C9-D0EA1267998B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.UnitTests", "tests\WeatherApp.UnitTests\WeatherApp.UnitTests.csproj", "{358FE40E-141E-469C-9D19-1F4F7F0FE804}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.UnitTests", "tests\WeatherApp.UnitTests\WeatherApp.UnitTests.csproj", "{358FE40E-141E-469C-9D19-1F4F7F0FE804}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Application", "src\WeatherApp.Application\WeatherApp.Application.csproj", "{5803B2BB-8BEC-4695-A3AE-5BEA9366D45C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp.Infrastructure", "src\WeatherApp.Infrastructure\WeatherApp.Infrastructure.csproj", "{5803B2BB-8BEC-4695-A3AE-5BEA9366D45C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Domain", "src\WeatherApp.Domain\WeatherApp.Domain.csproj", "{2E191D93-C0E7-40F1-BDCC-D1FB7614F987}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{5803B2BB-8BEC-4695-A3AE-5BEA9366D45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5803B2BB-8BEC-4695-A3AE-5BEA9366D45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5803B2BB-8BEC-4695-A3AE-5BEA9366D45C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E191D93-C0E7-40F1-BDCC-D1FB7614F987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E191D93-C0E7-40F1-BDCC-D1FB7614F987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E191D93-C0E7-40F1-BDCC-D1FB7614F987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E191D93-C0E7-40F1-BDCC-D1FB7614F987}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{BF2FE3E9-630A-4731-A7C9-D0EA1267998B} = {0C9BBEE4-C805-41A1-892E-74E056B0581C}
 		{358FE40E-141E-469C-9D19-1F4F7F0FE804} = {B4887D5B-C682-4889-89C9-850A04B1F995}
 		{5803B2BB-8BEC-4695-A3AE-5BEA9366D45C} = {0C9BBEE4-C805-41A1-892E-74E056B0581C}
+		{2E191D93-C0E7-40F1-BDCC-D1FB7614F987} = {0C9BBEE4-C805-41A1-892E-74E056B0581C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AA7ECE9F-F7B2-4A17-9D3A-1A5DD7A4D43B}
