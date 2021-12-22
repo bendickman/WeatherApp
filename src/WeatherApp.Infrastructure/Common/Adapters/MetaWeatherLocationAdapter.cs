@@ -2,11 +2,10 @@
 using System.Linq;
 using WeatherApp.Domain.Entities;
 using WeatherApp.Infrastructure.Common.Entities;
-using WeatherApp.Infrastructure.Common.Interfaces;
 
 namespace WeatherApp.Infrastructure.Common.Adapters
 {
-    public class MetaWeatherLocationAdapter : ILocationAdapter<MetaWeatherLocation>
+    public class MetaWeatherLocationAdapter
     {
         public IEnumerable<Location> Convert(IEnumerable<MetaWeatherLocation> metaWeatherLocations)
         {
