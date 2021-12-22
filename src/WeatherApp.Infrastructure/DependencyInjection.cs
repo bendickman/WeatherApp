@@ -1,8 +1,9 @@
 ﻿using System.Reflection;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using WeatherApp.Infrastructure.Common.Adapters;
 using WeatherApp.Infrastructure.Common.Interfaces;
-using WeatherApp.Infrastructure.Services;
+using WeatherApp.Infrastructure.Common.Services;
 
 namespace WeatherApp.Infrastructure
 {
@@ -10,9 +11,9 @@ namespace WeatherApp.Infrastructure
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-
             services.AddMediatR(Assembly.GetExecutingAssembly());
-            services.AddScoped<ILocationService, MockLocationService>();
+            services.AddScoped<ILocationService, MetaWeatherLocationService>();
+            services.AddScoped<MetaWeatherLocationAdapter>();
 
             return services;
         }

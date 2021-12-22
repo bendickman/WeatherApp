@@ -25,11 +25,11 @@ namespace WeatherApp.Application.Locations.Queries
             _locationService = locationService;
         }
 
-        public Task<IEnumerable<Location>> Handle(GetLocationsQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<Location>> Handle(GetLocationsQuery request, CancellationToken cancellationToken)
         {
-            var vm = _locationService.GetLocations(request.SearchText);            
+            var vm = await _locationService.GetLocations(request.SearchText).ConfigureAwait(false);
 
-            return Task.FromResult(vm);
+            return vm;
         }
     }
 }

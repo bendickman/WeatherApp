@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using WeatherApp.Infrastructure;
+using WeatherApp.Infrastructure.Entities;
 
 namespace WeatherApp.Api
 {
@@ -24,6 +25,9 @@ namespace WeatherApp.Api
 
             services.AddHttpContextAccessor();
             services.AddControllers();
+
+            services.Configure<MetaWeatherApi>(Configuration.GetSection("MetaWeatherApi"));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WeatherApp.Api", Version = "v1" });

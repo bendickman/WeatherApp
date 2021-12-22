@@ -2,14 +2,15 @@
 using WeatherApp.Infrastructure.Common.Interfaces;
 using WeatherApp.Domain.Entities;
 using Bogus;
+using System.Threading.Tasks;
 
 namespace WeatherApp.Infrastructure.Services
 {
     public class MockLocationService : ILocationService
     {
-        public IEnumerable<Location> GetLocations(string searchText)
+        public Task<IEnumerable<Location>> GetLocations(string searchText)
         {
-            return GenerateLocations(50);
+            return Task.FromResult(GenerateLocations(50));
         }
 
         private IEnumerable<Location> GenerateLocations(int count)
