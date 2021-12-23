@@ -6,6 +6,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using WeatherApp.Infrastructure;
 using WeatherApp.Infrastructure.Entities;
+using Refit;
+using WeatherApp.Infrastructure.Common.Interfaces;
+using System;
 
 namespace WeatherApp.Api
 {
@@ -32,6 +35,9 @@ namespace WeatherApp.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WeatherApp.Api", Version = "v1" });
             });
+
+            services.AddRefitClient<IMetaWeatherApi>()
+                .ConfigureHttpClient(c => c.BaseAddress = new Uri(Configuration["MetaWeatherApi:BaseUrl"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
