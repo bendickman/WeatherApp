@@ -27,7 +27,7 @@ namespace WeatherApp.Application.Locations.Queries
 
         public async Task<IEnumerable<Location>> Handle(GetLocationsQuery request, CancellationToken cancellationToken)
         {
-            var vm = await _locationService.GetLocations(request.SearchText).ConfigureAwait(false);
+            var vm = await _locationService.GetLocationsAsync(request.SearchText).ConfigureAwait(false);
 
             return vm;
         }

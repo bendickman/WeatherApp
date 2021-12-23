@@ -17,7 +17,7 @@ namespace WeatherApp.Infrastructure.Common.Services
             _weatherApiClient = weatherApiClient;
         }
 
-        public async Task<IEnumerable<Location>> GetLocations(string searchText)
+        public async Task<IEnumerable<Location>> GetLocationsAsync(string searchText)
         {
             var results = await _weatherApiClient.GetLocations(searchText).ConfigureAwait(false);
 

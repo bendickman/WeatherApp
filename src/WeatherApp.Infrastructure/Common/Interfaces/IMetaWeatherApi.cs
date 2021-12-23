@@ -9,5 +9,8 @@ namespace WeatherApp.Infrastructure.Common.Interfaces
     {
         [Get("/location/search/?query={searchText}")]
         Task<IEnumerable<MetaWeatherLocation>> GetLocations(string searchText);
+
+        [Get("/location/{id}")]
+        Task<MetaWeather> GetWeatherForecast(int id);
     }
 }

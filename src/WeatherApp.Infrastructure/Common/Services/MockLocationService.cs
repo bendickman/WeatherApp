@@ -8,7 +8,7 @@ namespace WeatherApp.Infrastructure.Services
 {
     public class MockLocationService : ILocationService
     {
-        public Task<IEnumerable<Location>> GetLocations(string searchText)
+        public Task<IEnumerable<Location>> GetLocationsAsync(string searchText)
         {
             return Task.FromResult(GenerateLocations(50));
         }
