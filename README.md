@@ -4,6 +4,8 @@
 
 The project was built using Visual Studio 2019 targeting .NET 5
 
+---
+
 ## Architecture Overview
 
 ### Api
@@ -24,5 +26,26 @@ The data for this application is obtained via the [MetaWeather API](https://www.
 
 This layer contains all of the units tests for the application, which are designed to be run both during development and any deployments (CD/CI)
 
-### API Endpoints
+---
+
+## API Endpoints
+
+- Get a list of locations based on search text i.e. London
+
+*Http GET* `/api/location`
+
+- Get a 6 day weather forecast for a given location id i.e. 44418 (London)
+
+*HTTP GET* `/api/weatherForecast`
+
+Swagger definition located at `/swagger/index.html`
+
+---
+
+##Technologies
+
+* [.NET 5](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0)
+* [MediatR](https://github.com/jbogard/MediatR)
+* [Refit](https://github.com/reactiveui/refit)
+* [NUnit](https://nunit.org/) & [Moq](https://github.com/moq)
 
