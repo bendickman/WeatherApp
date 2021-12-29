@@ -29,15 +29,13 @@ This layer contains all of the units tests for the application, which are design
 
 - Get a list of locations based on search text i.e. London
 
-*Http GET* `/api/location`
+*Http GET* `/api/location?searchText=London`
 
 - Get a 6 day weather forecast for a given location id i.e. 44418 (London)
 
-*HTTP GET* `/api/weatherForecast`
+*HTTP GET* `/api/weatherForecast?id=44418`
 
-Swagger definition located at `/swagger/index.html`
-
----
+The easiest way to test the API is via the Swagger definition located at `/swagger/index.html`
 
 ## Technologies
 
@@ -45,5 +43,6 @@ Swagger definition located at `/swagger/index.html`
 * [MediatR](https://github.com/jbogard/MediatR)
 * [Refit](https://github.com/reactiveui/refit)
 * [Swagger](https://swagger.io/)
+* [Bogus](https://github.com/bchavez/Bogus)
 * [NUnit](https://nunit.org/) & [Moq](https://github.com/moq)
 
