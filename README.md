@@ -4,8 +4,6 @@
 
 The project was built using Visual Studio 2019 targeting .NET 5
 
----
-
 ## Architecture Overview
 
 ### Api
@@ -26,7 +24,6 @@ The data for this application is obtained via the [MetaWeather API](https://www.
 
 This layer contains all of the units tests for the application, which are designed to be run both during development and any deployments (CD/CI)
 
----
 
 ## API Endpoints
 
@@ -42,10 +39,11 @@ Swagger definition located at `/swagger/index.html`
 
 ---
 
-##Technologies
+## Technologies
 
-* [.NET 5](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0)
+* [.NET 5](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-5.0)
 * [MediatR](https://github.com/jbogard/MediatR)
 * [Refit](https://github.com/reactiveui/refit)
+* [Swagger](https://swagger.io/)
 * [NUnit](https://nunit.org/) & [Moq](https://github.com/moq)
 
