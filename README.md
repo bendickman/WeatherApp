@@ -6,6 +6,8 @@ The project was built using Visual Studio 2019 targeting .NET 5
 
 ## Architecture Overview
 
+The architecture approach for this application has taken inspiration from Jason Taylor's [Clean Architecture](https://github.com/jasontaylordev/CleanArchitecture)
+
 ### Api
 
 This layer is a Web API targeting .NET Core 5 that provides all the endpoints of the application (details to follow)
@@ -45,4 +47,5 @@ The easiest way to test the API is via the Swagger definition located at `/swagg
 * [Swagger](https://swagger.io/)
 * [Bogus](https://github.com/bchavez/Bogus)
 * [NUnit](https://nunit.org/) & [Moq](https://github.com/moq)
+
 
